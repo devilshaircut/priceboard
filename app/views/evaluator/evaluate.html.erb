@@ -1,3 +1,10 @@
-<p><%= @title %></p>
-<p><%= @author %></p>
-<p><%= @itemid %></p>
+<p>This page accepts the ID number of a book listing on Amazon.com and returns it's author.</p>
+
+<p>For example, if you input the ID "<%= @itemid %>", the application should return "<%= @title %>".</p>
+
+<p>Author <%= @author %></p>
+
+<%= form_tag(:action => 'findauthor') do %>
+  <%= text_field_tag "itemnumber" %>
+  <%= submit_tag "Find Author!" %>
+<% end %>

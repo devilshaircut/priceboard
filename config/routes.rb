@@ -1,6 +1,7 @@
 Priceboard::Application.routes.draw do
 
   get "evaluator/evaluate"
+  match '/evaluator/findauthor', :to => 'evaluator#findauthor'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
