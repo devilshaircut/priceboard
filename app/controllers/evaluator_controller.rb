@@ -10,7 +10,11 @@ class EvaluatorController < ApplicationController
   def findauthor
     finditem = AmazonProductAdvertisingApi::Operations::Item::ItemLookup.new(params["itemnumber"])
     finditem.run
-    @author = finditem.response.items.first.item_attributes.author
+    if finditem.response.items.first != nil
+      @author = finditem.response.items.first.item_attributes.author
+    else
+      @author = nil
+    end
   end
 
 end

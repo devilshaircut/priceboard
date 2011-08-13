@@ -86,7 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   amazon-product-advertising-api (~> 0.2.1)
-  compass (>= 0.11.3)
+  compass (>= 0.11.5)
   jquery-rails (>= 1.0.12)
   pg
   rails (= 3.0.7)

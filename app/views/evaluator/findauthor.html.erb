@@ -3,3 +3,8 @@
 <% else %>
   <p>Invalid product ID.</p>
 <% end %>
+
+<%= form_tag(:action => 'findauthor') do %>
+  <%= text_field_tag "itemnumber" %>
+  <%= submit_tag "Find Author!" %>
+<% end %>
